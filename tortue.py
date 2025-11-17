@@ -12,9 +12,17 @@ def equilateral(longueur):
         t.forward(longueur)
         t.right(180-60)
         
-equilateral(100)
+
+def carre(longueur):
+    """
+    longueur(int) : la longueur du côté du carré
+    Dessine un carré de côté <longueur>
+    """
+    for _ in range(4):
+        t.forward(longueur)
+        t.right(90)
+carre(100)
 
 turtle.exitonclick()
 
 
-    
