@@ -8,9 +8,8 @@ def equilateral(longueur):
     longueur(int) : la longueur du côté du triangle
     Dessine un triangle équilatéral de côté <longueur>
     """
-    for _ in range(3):
-        t.forward(longueur)
-        t.right(180-60)
+    polygone(longueur, 3)
+    
 
 #equilateral(100)
 
@@ -19,10 +18,8 @@ def carre(longueur):
     longueur(int) : la longueur du côté du carré
     Dessine un carré de côté <longueur>
     """
-    for _ in range(4):
-        t.forward(longueur)
-        t.right(90)
-#carre(100)
+    polygone(longueur, 4)
+    
 
 def polygone(longueur, nb_cotes):
     """
@@ -33,7 +30,8 @@ def polygone(longueur, nb_cotes):
     for _ in range(nb_cotes):
         t.forward(longueur)
         t.right(360/nb_cotes)
-polygone(100, 6)
+#polygone(100, 6)
+equilateral(100)
 
 turtle.exitonclick()
 
