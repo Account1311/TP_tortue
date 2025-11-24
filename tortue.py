@@ -3,7 +3,7 @@ s = turtle.getscreen()
 t = turtle.Turtle()
 t.speed(0) # maximum speed
 
-def equilateral(longueur):
+def equilateral(longueur, ajout=0, deviation=0):
     """
     longueur(int) : la longueur du côté du triangle
     Dessine un triangle équilatéral de côté <longueur>
@@ -13,7 +13,7 @@ def equilateral(longueur):
 
 #equilateral(100)
 
-def carre(longueur):
+def carre(longueur, ajout=0, deviation=0):
     """
     longueur(int) : la longueur du côté du carré
     Dessine un carré de côté <longueur>
@@ -35,10 +35,15 @@ def polygone(longueur, nb_cotes, ajout=0, deviation=0):
         t.right(360/nb_cotes + total_dev)
         total_dev = total_dev + deviation
         
-polygone(100, 4,deviation = -10)
+#polygone(100, 4,deviation = -10)
 
+def figure1(longueur, nb_cotes, ajout=0, deviation =0 ):
 
-
+    for _ in range(100):
+        polygone(longueur, 4, 1, 1)
+        longueur += 6
+    
+figure1(20, 4)
 
 
 turtle.exitonclick()
