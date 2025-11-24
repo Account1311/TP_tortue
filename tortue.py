@@ -37,13 +37,53 @@ def polygone(longueur, nb_cotes, ajout=0, deviation=0):
         
 #polygone(100, 4,deviation = -10)
 
-def figure1(longueur, nb_cotes, ajout=0, deviation =0 ):
+def figure1(longueur, nb_tours):
+    for _ in range(nb_tours):
+        polygone(longueur, 4, 2, 1)
+        longueur += 10
+
+#figure1(20, 1000)
+
+
+def figure2(longueur, nb_cotes, ajout=0, deviation =0 ):
 
     for _ in range(100):
         polygone(longueur, 4, 1, 1)
-        longueur += 6
-    
-figure1(20, 4)
+        longueur += 4
+        
+figure2(20, 4)
+
+
+
+
+
+def figure3(longueur):
+
+    for _ in range(100):
+        carre(longueur)
+        t.up()
+        t.forward(longueur)
+        t.left(60)
+        t.down()
+        longueur = longueur + 20
+        
+def figure4(longueur):
+
+    for i in range(8):
+        carre(longueur)
+        t.up()
+        t.forward(longueur)
+        t.right(90)
+        t.forward(longueur)
+        t.right(90)
+        t.down()
+        longueur = longueur*1.2
+        if i%2==0:
+            t.left(180)
+        
+        
+
+#figure4(10)
 
 
 turtle.exitonclick()
